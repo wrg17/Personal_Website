@@ -11,25 +11,13 @@
 
     import { createEventDispatcher } from 'svelte'
     const dispatch = createEventDispatcher();
-
-    // tabs
-    export let activeItem;
-    let terminalName;
-
-    const tabChange = (e) => {
-        activeItem = e.detail;
-        location.href = ("/" + (e.detail != "Home" ? e.detail : "")).toLowerCase();
-        terminalName = e.detail.replace(" ", "\\ ")
-        dispatch('contentChange', e.detail)
-        console.log(e.detail)
-    }
 </script>
 
 <svelte:head>
     <link rel="stylesheet" href={`theme/${$theme}.css`} />
 </svelte:head>
 
-<header class="tile" id="header">
+<header class="glass" id="header">
     <div class="heading">
         <div>
             <div class="header_bio">
@@ -51,23 +39,32 @@
         <div class="header_links_container">
             <div class="header_links">
                 <a id="home" href="/" class:active={current === 'home'}>Home</a>
-                <a id="hobbies" href="/hobbies" class:active={current === 'hobbies'}>Hobbies</a>
                 <a id="projects" href="/projects" class:active={current === 'projects'}>Projects</a>
+                <a id="hobbies" href="/hobbies" class:active={current === 'hobbies'}>Hobbies</a>
             </div>
         </div>
-        <h1 class="terminal">
-            williamgeorge@Wills-Website ~{activeItem !== 'Home' ? "/" + terminalName : ""} %
-        </h1>
     </div>
+
 </header>
 
 
 <style>
     header {
-        position: fixed;
-        top: 0;
-        z-index: 150;
-        color: black;
+        z-index: 101;
+        width: 100%;
+        position: sticky; top: 0;
+        box-sizing: border-box; /* add this */
+    }
+
+    .heading {
+        z-index: inherit;
+        position: relative;
+        width: auto;
+        padding: 2%;
+        height: 30px;
+        horiz-align: center;
+        text-align: center;
+        display: flex;
     }
 
     .icons {
@@ -82,16 +79,6 @@
     .icons img {
         cursor: pointer;
         height: 25px;
-    }
-
-    .heading {
-        position: absolute;
-        padding: 2%;
-        height: 96%;
-        width: 96%;
-        horiz-align: center;
-        text-align: center;
-        display: flex;
     }
 
     .heading > * {
@@ -112,54 +99,51 @@
 
     .header_links {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
     }
 
     /* Sidebar links */
     .heading .header_links a {
-        width: 96%;
-        margin: 0;
-        display: block;
+        text-align: center;
         color: var(--text-primary);
         padding: 2%;
         //padding: 30px;
         text-decoration: none;
         //height: 20px;
-        transition: ease-in 0.15s !important;
+        //transition: ease-in 0.15s !important;
     }
 
     /* Active/current link */
     .heading .header_links a.active {
-        transition: ease-in-out 0.2s;
-        transition: background-color 0.3s;
+        //transition: ease-in-out 0.2s;
+        //transition: background-color 0.3s;
         background-color: var(--color-secondary);
-        color: var(--text-secondary);
+        color: red; /* var(--text-secondary); */
         outline: none;
     }
 
     /* Links on mouse-over */
     .heading .header_links a:hover:not(.active) {
-        transition: background-color 0.3s;
+        //transition: background-color 0.3s;
         background-color: var(--color-secondary-hover);
     }
     .heading .header_links a:hover {
-        transition: ease-in 0.15s;
-        font-size: 120%;
+        //transition: ease-in 0.15s;
+        font-size: 110%;
     }
 
     .user_info_container {
-        width: 170px;
-        height: 170px;
+        //width: 170px;
+        //height: 170px;
         display: inline-block;
     }
 
     .user_info {
-        transition: background-color 0.3s;
-        transition: ease-in .15s;
+        //transition: background-color 0.3s;
         display: inline-block;
-        width: 150px;
-        height: 150px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
         align-items: center;
 
@@ -175,13 +159,8 @@
         cursor: pointer;
         width: 160px;
         height: 160px;
-        transition: .15s ease-in;
+        //transition: .15s ease-in;
     }
 
-    .terminal {
-        text-align: left;
-        horiz-align: left;
-        padding-left: 1%;
-    }
 
 </style>

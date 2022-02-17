@@ -12,7 +12,7 @@
         <div class="project-img-style">
             <h1 class="project-title-style">{proj_title}</h1>
         </div>
-        <div class="project-description-style tile">
+        <div class="project-description-style glass">
             <div class="text"> {proj_des} </div>
         </div>
     </a>

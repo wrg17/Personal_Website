@@ -43,6 +43,15 @@
 		const contentChange = (e) => {
 			current = e.detail
 		}
+
+		$: {
+			let curr_page = $page.url.pathname
+			if (curr_page === '/') {
+				current = 'home'
+			} else {
+				current = curr_page.replace('/', '')
+			}
+		}
 </script>
 
 <svelte:head>
@@ -51,59 +60,38 @@
 </svelte:head>
 <svelte:window bind:scrollY={scrollYPos} />
 
-<div in:fade="{{duration: 800}}" class="background">
+<body>
+    <div in:fade="{{duration: 800}}" class="background">
 
-    <Header {current} on:contentChange={contentChange}/>
-    <!-- Page content-->
-    <div class="panel">
-        <div class="panel-content">Hello There</div>
-    </div>
+        <Header {current} on:contentChange={contentChange}/>
+        <!-- Page content-->
+        <!--<div class="panel">
+            <div class="panel-content">Hello There</div>
+        </div>-->
 
-    <div class="content">
-        <div>
-            <slot></slot>
+        <div class="content">
+            <div>
+                <slot></slot>
+            </div>
         </div>
     </div>
-</div>
+</body>
+
 
 <style>
-    .panel {
-        position: relative;
-        background: inherit;
-        top: 500px;
-        left: 1000px;
-        width: 250px;
-        height: 350px;
-        overflow: hidden;
-    }
-
-    .panel:before{
-        content: " ";
-        background: inherit;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.2);
-        filter: blur(10px);
-    }
-
-    .panel-content {
-        position: absolute;
-    }
-
     .background {
-        transition: background-color 0.3s;
+        //transition: background-color 0.3s;
         background-color: var(--color-background);
     }
 
     .content {
+        position: relative;
         margin: 20% 10%;
         height: 100%;
         flex: 1 0 auto;
         text-align: center;
         horiz-align: center;
+        z-index: 1;
     }
 
 </style>
