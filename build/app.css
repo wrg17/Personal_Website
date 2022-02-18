@@ -1,0 +1,59 @@
+html {
+    font-family: "Arial";
+}
+
+#svelte {
+    transition: background-color 0.3s;
+    /*min-height: 100vh;*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background);
+}
+
+html, body {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 30px;
+    background-color: black;
+    background-image:
+            radial-gradient(
+                    ellipse farthest-corner at top left,
+                    var(--color-background-gradient-secondary),
+                    var(--color-background-gradient-primary),
+                    var(--color-background-gradient-tertiary),
+                    var(--color-background-gradient-primary),
+                    var(--color-background-gradient-secondary)
+            );
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.glass {
+    background: inherit;
+    position: relative;
+    box-shadow: 1px 1px 4px 1px /*var(--color-glass-primary)*/;
+    z-index: 100;
+}
+
+.glass:before {
+    content: "";
+    background: inherit;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 200px white /*var(--color-glass-secondary)*/;
+    filter: blur(30px);
+    margin: -1px;
+    z-index: 99;
+}
+
+.terminal {
+    color: red;
+}
