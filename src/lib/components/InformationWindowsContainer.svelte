@@ -2,7 +2,15 @@
     import InformationWindow from "./InformationWindow.svelte";
 
     let content_array = [
-        ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqi feOanXJvUsSl TvEEoFIrJAmDcZnt ujhJSpKEJMsHPLUE KpkGznRfZUTqthPg gRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS", "www.google.com"],
+        ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqi feOanXJvUsSl TvEEoFIrJAmDcZnt ujhJSpKEJMsHPLUE KpkGznRfZUTqthPg gRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS", "https://google.com"],
+        ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqi feOanXJvUsSl TvEEoFIrJAmDcZnt ujhJSpKEJMsHPLUE KpkGznRfZUTqthPg gRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS", "https://google.com"],
+        ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqi feOanXJvUsSl TvEEoFIrJAmDcZnt ujhJSpKEJMsHPLUE KpkGznRfZUTqthPg gRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS", "https://google.com"],
+        ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqi feOanXJvUsSl TvEEoFIrJAmDcZnt ujhJSpKEJMsHPLUE KpkGznRfZUTqthPg gRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS", "https://google.com"],
+        ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqi feOanXJvUsSl TvEEoFIrJAmDcZnt ujhJSpKEJMsHPLUE KpkGznRfZUTqthPg gRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS", "https://google.com"],
+        ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqi feOanXJvUsSl TvEEoFIrJAmDcZnt ujhJSpKEJMsHPLUE KpkGznRfZUTqthPg gRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS", "https://google.com"],
+        ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqi feOanXJvUsSl TvEEoFIrJAmDcZnt ujhJSpKEJMsHPLUE KpkGznRfZUTqthPg gRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS", "https://google.com"],
+			["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqi feOanXJvUsSl TvEEoFIrJAmDcZnt ujhJSpKEJMsHPLUE KpkGznRfZUTqthPg gRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS", "https://google.com"],
+        ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqi feOanXJvUsSl TvEEoFIrJAmDcZnt ujhJSpKEJMsHPLUE KpkGznRfZUTqthPg gRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS", "https://google.com"],
         ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS"],
         ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS"],
         ["TITLE", "static/img/ocean.jpeg", "dino", "eIQPFsrGsFiZqifeOanXJvUsSlTvEEoFIrJAmDcZntujhJSpKEJMsHPLUEKpkGznRfZUTqthPggRUSkncbzTtiYkVgHfdZWxBXAS"],
@@ -31,10 +39,21 @@
         display: grid;
         gap: 5% 2.5%;
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: minmax(300px, auto);
+        grid-auto-rows: minmax(200px, auto);
     }
+
+    .grid-item:nth-child(7n -6)  {
+        grid-column: span 2;
+        border-radius: 50%;
+    }
+
+    .grid-item:nth-child(11n + 7)  {
+        grid-column: span 2;
+        border-radius: 50%;
+    }
+
     .grid-item {
         display: block;
-        overflow:hidden;
+        overflow: hidden;
     }
 </style>

@@ -1,5 +1,7 @@
 <script>
     import { theme } from '$lib/stores';
+    import { createEventDispatcher } from 'svelte'
+    const dispatch = createEventDispatcher();
 
     export let current;
 
@@ -8,9 +10,6 @@
         theme.set(nextTheme);
         localStorage.setItem('theme', nextTheme);
     }
-
-    import { createEventDispatcher } from 'svelte'
-    const dispatch = createEventDispatcher();
 </script>
 
 <svelte:head>
@@ -23,25 +22,24 @@
             <div class="header_bio">
                 <div class="user_info_container">
                     <div class="user_info" on:click={togglePalette}></div>
-                    <div class="William George"><span>William George</span></div>
                 </div>
-
-                <div class="icons">
-                    <a href="https://linkedin.com/in/william-george1">
-                        <img src="/static/img/icons/linkedin5.png" alt="linkedin icon">
-                    </a>
-                    <a href="https://github.com/wrg17">
-                        <img src="/static/img/icons/github.png" alt="github icon">
-                    </a>
+                <div class="info_tile glass">
+                    <div class="William_George"><span>William George</span></div>
+                    <div class="icons">
+                        <a href="https://linkedin.com/in/william-george1">
+                            <img src="/static/img/icons/linkedin5.png" alt="linkedin icon">
+                        </a>
+                        <a href="https://github.com/wrg17">
+                            <img src="/static/img/icons/github.png" alt="github icon">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="header_links_container">
-            <div class="header_links">
-                <a id="home" href="/" class:active={current === 'home'}>Home</a>
-                <a id="projects" href="/projects" class:active={current === 'projects'}>Projects</a>
-                <a id="hobbies" href="/hobbies" class:active={current === 'hobbies'}>Hobbies</a>
-            </div>
+        <div class="header_links">
+            <a id="home" href="/" class:active={current === 'home'}>Home</a>
+            <a id="projects" href="/projects" class:active={current === 'projects'}>Projects</a>
+            <a id="hobbies" href="/hobbies" class:active={current === 'hobbies'}>Hobbies</a>
         </div>
     </div>
 
@@ -49,10 +47,18 @@
 
 
 <style>
+    .info_tile {
+        padding: 1%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
     header {
+        position: sticky;
+        top: 0;
         z-index: 101;
         width: 100%;
-        position: sticky; top: 0;
+        color: var(--text-secondary);
         box-sizing: border-box; /* add this */
     }
 
@@ -60,8 +66,8 @@
         z-index: inherit;
         position: relative;
         width: auto;
-        padding: 2%;
-        height: 30px;
+        padding-left: 2%;
+        height: 50px;
         horiz-align: center;
         text-align: center;
         display: flex;
@@ -81,66 +87,52 @@
         height: 25px;
     }
 
-    .heading > * {
-        flex: 0 0 auto;
-        height: 100%;
-        margin: 0;
-    }
-
     .header_bio {
         flex-grow: 0.25;
     }
 
-    .header_links_container {
-        flex-grow: 0.1;
-        flex-shrink: 1;
-        align-self: center;
-    }
-
     .header_links {
+        flex-grow: 1;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        column-gap: 10px;
     }
 
     /* Sidebar links */
     .heading .header_links a {
-        text-align: center;
+        display: block;
+        align-self: center;
         color: var(--text-primary);
-        padding: 2%;
-        //padding: 30px;
         text-decoration: none;
-        //height: 20px;
-        //transition: ease-in 0.15s !important;
+        transition: ease-in .15s!important;
     }
 
     /* Active/current link */
     .heading .header_links a.active {
-        //transition: ease-in-out 0.2s;
-        //transition: background-color 0.3s;
-        background-color: var(--color-secondary);
-        color: red; /* var(--text-secondary); */
-        outline: none;
+        transition: ease-in-out 0.2s;
+        text-shadow: 0.1em 0 0 black;
+        padding-bottom: 4px;
+        border-bottom: 2px solid var(--color-secondary);
+        color: var(--text-secondary);
     }
 
     /* Links on mouse-over */
     .heading .header_links a:hover:not(.active) {
-        //transition: background-color 0.3s;
-        background-color: var(--color-secondary-hover);
+        transition: background-color 0.3s;
+        color: var(--text-secondary-hover);
     }
-    .heading .header_links a:hover {
-        //transition: ease-in 0.15s;
-        font-size: 110%;
+
+    .William_George {
+        padding-bottom: 2px;
     }
 
     .user_info_container {
-        //width: 170px;
-        //height: 170px;
+        padding-top: 10px;
         display: inline-block;
     }
 
     .user_info {
-        //transition: background-color 0.3s;
+        transition: ease-in-out 0.3s;
         display: inline-block;
         width: 90px;
         height: 90px;
@@ -151,15 +143,15 @@
         background-position: 50% 1%;
         background-size: cover;
         background-image: url("static/img/Self_Portrait.jpg");
-        border: 2px solid var(--color-secondary);
+        border: 2px solid var(--color-secondary)
     }
 
 
     .user_info:hover {
         cursor: pointer;
-        width: 160px;
-        height: 160px;
-        //transition: .15s ease-in;
+        width: 100px;
+        height: 100px;
+        transition: ease-in-out .2s;
     }
 
 

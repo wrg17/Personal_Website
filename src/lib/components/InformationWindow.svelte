@@ -46,7 +46,7 @@
         width: 100%;
 
         background-image: url("static/img/ocean.jpeg");
-        opacity: 50%;
+        opacity: 90%;
         background-size: cover;
     }
 
