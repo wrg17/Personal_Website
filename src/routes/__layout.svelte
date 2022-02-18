@@ -5,7 +5,7 @@
     import { theme } from '$lib/stores';
     import { page } from '$app/stores';
 
-    import '../app.css';
+    import '/static/app.css';
 
     import Header from '../lib/components/Header.svelte';
 
@@ -21,21 +21,23 @@
     });
 
     $: {
-        switch ($page.url.pathname) {
+    	let text = $page.url.pathname
+      console.log(text);
+        switch (text) {
             case '/':
                 current = 'home';
                 break;
             case '/hobbies':
                 current = 'hobbies';
                 break;
-            case '/projects':
+            case ('/projects' || text.startsWith('/projects/')):
                 current = 'projects';
                 break;
             case '/etc':
                 current = 'etc';
                 break;
             default:
-                console.log('unknown page');
+                console.log('unknown page', text);
         }
     }
 
@@ -67,7 +69,10 @@
     .content {
         position: relative;
         //display: inline-block;
-        padding: 30px 170px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 170px;
+        padding-right: 170px;
         z-index: 1;
         color: var(--text-primary);
     }
