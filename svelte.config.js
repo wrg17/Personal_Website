@@ -8,11 +8,13 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: netlify(),
-		target: '#svelte',
-		methodOverride: {
-			allowed: ['PATCH', 'DELETE']
-		}
+		adapter: netlify({
+			split: false
+		})
+		//target: '#svelte',
+		//methodOverride: {
+		//	allowed: ['PATCH', 'DELETE']
+		//}
 	}
 };
 
