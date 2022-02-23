@@ -44,8 +44,8 @@ const Header = (0, import_index_8d6f2ec3.c)(($$result, $$props, $$bindings, slot
 
 <header class="${"glass svelte-1sg77zl"}" id="${"header"}"><div class="${"heading svelte-1sg77zl"}"><div><div class="${"header_bio svelte-1sg77zl"}"><div class="${"user_info_container svelte-1sg77zl"}"><div class="${"user_info svelte-1sg77zl"}"></div></div>
                 <div class="${"info_tile glass svelte-1sg77zl"}"><div class="${"William_George svelte-1sg77zl"}"><span>William George</span></div>
-                    <div class="${"icons svelte-1sg77zl"}"><a href="${"https://linkedin.com/in/william-george1"}" class="${"svelte-1sg77zl"}"><img src="${"/static/img/icons/linkedin5.png"}" alt="${"linkedin icon"}" class="${"svelte-1sg77zl"}"></a>
-                        <a href="${"https://github.com/wrg17"}" class="${"svelte-1sg77zl"}"><img src="${"/static/img/icons/github.png"}" alt="${"github icon"}" class="${"svelte-1sg77zl"}"></a></div></div></div></div>
+                    <div class="${"icons svelte-1sg77zl"}"><a href="${"https://linkedin.com/in/william-george1"}" class="${"svelte-1sg77zl"}"><img src="${"static/img/icons/linkedin5.png"}" alt="${"linkedin icon"}" class="${"svelte-1sg77zl"}"></a>
+                        <a href="${"https://github.com/wrg17"}" class="${"svelte-1sg77zl"}"><img src="${"static/img/icons/github.png"}" alt="${"github icon"}" class="${"svelte-1sg77zl"}"></a></div></div></div></div>
         <div class="${"header_links svelte-1sg77zl"}"><a id="${"home"}" href="${"/"}" class="${["svelte-1sg77zl", current === "home" ? "active" : ""].join(" ").trim()}">Home</a>
             <a id="${"projects"}" href="${"/projects"}" class="${["svelte-1sg77zl", current === "projects" ? "active" : ""].join(" ").trim()}">Projects</a>
             <a id="${"hobbies"}" href="${"/hobbies"}" class="${["svelte-1sg77zl", current === "hobbies" ? "active" : ""].join(" ").trim()}">Hobbies</a></div></div>
@@ -98,7 +98,7 @@ const _layout = (0, import_index_8d6f2ec3.c)(($$result, $$props, $$bindings, slo
   }
   $$unsubscribe_page();
   $$unsubscribe_theme();
-  return `${$$result.head += `<link rel="${"stylesheet"}"${(0, import_index_8d6f2ec3.d)("href", `/static/theme/${$theme}.css`, 0)} data-svelte="svelte-1rgg590">${$$result.title = `<title>William George</title>`, ""}`, ""}
+  return `${$$result.head += `<link rel="${"stylesheet"}"${(0, import_index_8d6f2ec3.d)("href", `static/theme/${$theme}.css`, 0)} data-svelte="svelte-14agar5">${$$result.title = `<title>William George</title>`, ""}`, ""}
 
 <body>${(0, import_index_8d6f2ec3.v)(Header, "Header").$$render($$result, { current }, {}, {})}
     

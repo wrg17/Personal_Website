@@ -1,5 +1,5 @@
 <script>
-    import InformationWindowsContainer from "src/lib/components/InformationWindowsContainer.svelte";
+    import InformationWindowsContainer from "/src/lib/components/InformationWindowsContainer.svelte";
 </script>
 
 <section>

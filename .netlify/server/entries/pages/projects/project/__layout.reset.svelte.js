@@ -68,7 +68,7 @@ const _layout_reset = (0, import_index_8d6f2ec3.c)(($$result, $$props, $$binding
   }
   $$unsubscribe_page();
   $$unsubscribe_theme();
-  return `${$$result.head += `<link rel="${"stylesheet"}"${(0, import_index_8d6f2ec3.d)("href", `/static/theme/${$theme}.css`, 0)} data-svelte="svelte-1rgg590">${$$result.title = `<title>William George</title>`, ""}`, ""}
+  return `${$$result.head += `<link rel="${"stylesheet"}"${(0, import_index_8d6f2ec3.d)("href", `static/theme/${$theme}.css`, 0)} data-svelte="svelte-14agar5">${$$result.title = `<title>William George</title>`, ""}`, ""}
 
 <body class="${"svelte-10z42sj"}">
 
@@ -79,7 +79,7 @@ const _layout_reset = (0, import_index_8d6f2ec3.c)(($$result, $$props, $$binding
         <span>This is a description</span></div>
 
     <div class="${"tile glass svelte-10z42sj"}"><h1>Graph of Function Relations:</h1>
-        <img src="${"/static/projects/p1/graph_theory.png"}"></div>
+        <img src="${"static/projects/p1/graph_theory.png"}"></div>
 
     <div class="${"tile glass proof-links svelte-10z42sj"}"><h1>Links to Associated Proofs:</h1>
         <a href="${"https://google.com"}">I am a link to google

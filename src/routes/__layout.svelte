@@ -7,7 +7,7 @@
 
     import '/static/app.css';
 
-    import Header from 'src/lib/components/Header.svelte';
+    import Header from '/src/lib/components/Header.svelte';
 
 
     const THEME = 'theme';

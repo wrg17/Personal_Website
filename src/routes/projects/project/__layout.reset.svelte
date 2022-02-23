@@ -5,7 +5,7 @@
 	import { theme } from '$lib/stores';
 	import { page } from '$app/stores';
 
-	import 'static/app.css';
+	import '/static/app.css';
 
 	const THEME = 'theme';
 	let cur_theme = null

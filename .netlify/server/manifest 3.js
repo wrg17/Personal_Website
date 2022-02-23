@@ -29,7 +29,7 @@ const manifest = {
   assets: new Set(["app.css", "favicon.png", "img/Self_Portrait.jpg", "img/dino.png", "img/icons/LinkedIn.png", "img/icons/github.png", "img/icons/github.svg", "img/icons/image2vector (1).svg", "img/icons/linkedin.svg", "img/icons/linkedin1.svg", "img/icons/linkedin2.png", "img/icons/linkedin5.png", "img/icons/linkedin5.svg", "img/ocean.jpeg", "img/svg/back-arrow.svg", "img/what_are_you_doing_here.png", "projects/p1/graph_theory.png", "theme/dark.css", "theme/light.css"]),
   _: {
     mime: { ".css": "text/css", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml", ".jpeg": "image/jpeg" },
-    entry: { "file": "start-580f4b0e.js", "js": ["start-580f4b0e.js", "chunks/vendor-469c7b6c.js"], "css": [] },
+    entry: { "file": "start-fe66fb66.js", "js": ["start-fe66fb66.js", "chunks/vendor-469c7b6c.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => __toModule(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toModule(require("./nodes/1.js"))),
