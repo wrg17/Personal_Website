@@ -5,7 +5,7 @@
 	import { theme } from '$lib/stores';
 	import { page } from '$app/stores';
 
-	import '/static/app.css';
+	import 'static/app.css';
 
 	const THEME = 'theme';
 	let cur_theme = null
@@ -50,7 +50,7 @@
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href={`/static/theme/${$theme}.css`} />
+    <link rel="stylesheet" href={`static/theme/${$theme}.css`} />
     <title>William George</title>
 </svelte:head>
 
@@ -73,7 +73,7 @@
 
     <div class="tile glass">
         <h1>Graph of Function Relations:</h1>
-        <img src="/static/projects/p1/graph_theory.png">
+        <img src="static/projects/p1/graph_theory.png">
     </div>
 
     <div class="tile glass proof-links">

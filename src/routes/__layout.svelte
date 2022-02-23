@@ -7,7 +7,7 @@
 
     import '/static/app.css';
 
-    import Header from '../lib/components/Header.svelte';
+    import Header from 'src/lib/components/Header.svelte';
 
 
     const THEME = 'theme';
@@ -52,7 +52,7 @@
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href={`/static/theme/${$theme}.css`} />
+    <link rel="stylesheet" href={`static/theme/${$theme}.css`} />
     <title>William George</title>
 </svelte:head>
 

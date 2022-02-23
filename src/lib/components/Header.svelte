@@ -27,10 +27,10 @@
                     <div class="William_George"><span>William George</span></div>
                     <div class="icons">
                         <a href="https://linkedin.com/in/william-george1">
-                            <img src="/static/img/icons/linkedin5.png" alt="linkedin icon">
+                            <img src="static/img/icons/linkedin5.png" alt="linkedin icon">
                         </a>
                         <a href="https://github.com/wrg17">
-                            <img src="/static/img/icons/github.png" alt="github icon">
+                            <img src="static/img/icons/github.png" alt="github icon">
                         </a>
                     </div>
                 </div>
