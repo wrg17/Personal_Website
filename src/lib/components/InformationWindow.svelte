@@ -5,11 +5,11 @@
 </script>
 
 <a class="window" href={link}>
-	<div class="project-img-style">
+	<div class="project-img">
 		<img src={image} alt={imageAlt} loading="lazy" />
-		<h2 class="project-title-style">{title}</h2>
+		<h2 class="project-title">{title}</h2>
 	</div>
-	<div class="project-description-style glass">
+	<div class="project-description">
 		<p class="text">{description}</p>
 	</div>
 </a>
@@ -22,52 +22,59 @@
 		text-align: center;
 		height: 100%;
 		width: 100%;
-		border-radius: 12px;
+		border-radius: var(--border-radius);
+		border: 1px solid var(--surface-border);
 		box-sizing: border-box;
-		color: inherit;
+		color: var(--text-primary);
 		text-decoration: none;
-		background-color: rgba(0, 0, 0, 0.2);
-		transition: transform 0.2s ease-in-out;
+		background-color: var(--surface-strong);
+		box-shadow:
+			0 0 28px -4px rgba(249, 115, 22, 0.22),
+			var(--surface-shadow);
+		transition:
+			box-shadow 0.25s ease,
+			transform 0.25s ease;
 	}
 
 	.window:hover,
 	.window:focus-visible {
-		transform: translateY(-3px);
-		outline: 2px solid var(--color-secondary);
-		outline-offset: 2px;
+		box-shadow:
+			0 0 48px 0 rgba(249, 115, 22, 0.55),
+			var(--surface-shadow);
 	}
 
-	.project-img-style {
+	.project-img {
 		position: relative;
 		flex: 1 1 auto;
 		min-height: 160px;
 		overflow: hidden;
 	}
 
-	.project-img-style img {
+	.project-img img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		display: block;
 	}
 
-	.project-title-style {
+	.project-title {
 		position: absolute;
 		inset: 0;
 		display: grid;
 		place-items: center;
 		margin: 0;
-		color: white;
+		color: #ffffff;
 		text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 	}
 
-	.project-description-style {
+	.project-description {
 		padding: 0.75rem 1rem;
+		color: var(--text-primary);
+		border-top: 1px solid var(--surface-border);
 	}
 
 	.text {
 		margin: 0;
-		color: white;
 		overflow-wrap: break-word;
 	}
 </style>

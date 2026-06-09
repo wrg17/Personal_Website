@@ -27,7 +27,5 @@
 
 	.grid-item {
 		display: block;
-		overflow: hidden;
-		border-radius: 12px;
 	}
 </style>
