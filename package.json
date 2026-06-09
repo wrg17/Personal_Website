@@ -13,13 +13,16 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-netlify": "^6.0.4",
 		"@sveltejs/enhanced-img": "^0.10.4",
 		"@sveltejs/kit": "^2.64.0",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
+		"@tailwindcss/vite": "^4.3.0",
+		"@trivago/prettier-plugin-sort-imports": "^6.0.2",
 		"@types/node": "^25.9.2",
 		"@typescript-eslint/eslint-plugin": "^8.13.0",
 		"@typescript-eslint/parser": "^8.13.0",
@@ -27,11 +30,14 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.46.0",
 		"globals": "^15.12.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.0.7",
 		"prettier": "^3.3.3",
 		"prettier-plugin-svelte": "^3.2.7",
 		"svelte": "^5.1.16",
 		"svelte-check": "^4.0.5",
 		"svgo": "^3.3.2",
+		"tailwindcss": "^4.3.0",
 		"tslib": "^2.8.1",
 		"typescript": "^5.6.3",
 		"typescript-eslint": "^8.13.0",
@@ -40,5 +46,14 @@
 	"overrides": {
 		"cookie": "^0.7.2",
 		"esbuild": "^0.25.0"
+	},
+	"lint-staged": {
+		"*.{js,ts,svelte}": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"*.{css,html,json,md}": [
+			"prettier --write"
+		]
 	}
 }
