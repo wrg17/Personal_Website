@@ -36,32 +36,6 @@
 @layer base {
 	:root {
 		color-scheme: light;
-
-		/* Legacy aliases — remove after all components migrate to new tokens */
-		--bg-base: var(--color-canvas);
-		--bg-base-2: var(--color-canvas-2);
-		--bg-orange-glow: var(--color-canvas-glow);
-		--surface: var(--color-surface);
-		--surface-strong: var(--color-surface-elevated);
-		--surface-border: var(--color-surface-edge);
-		--surface-shadow: var(--shadow-surface);
-		--text-primary: var(--color-ink);
-		--text-secondary: var(--color-ink-muted);
-		--text-muted: var(--color-ink-subtle);
-		--text-on-accent: var(--color-ink-on-accent);
-		--accent-start: var(--color-accent-soft);
-		--accent-mid: var(--color-accent);
-		--accent-end: var(--color-accent-strong);
-		--accent-gradient: linear-gradient(
-			135deg,
-			var(--color-accent-soft) 0%,
-			var(--color-accent-strong) 100%
-		);
-		--color-primary: var(--color-accent);
-		--color-secondary: var(--color-accent-strong);
-		--color-secondary-hover: var(--color-accent-soft);
-		--border-radius: var(--radius-base);
-		--icon-filter: none;
 	}
 
 	.dark {
@@ -85,10 +59,6 @@
 		--color-accent-strong: #f97316;
 
 		--shadow-surface: 0 4px 16px rgba(0, 0, 0, 0.4);
-
-		/* Legacy alias overrides for dark mode */
-		--color-secondary: var(--color-accent);
-		--icon-filter: invert(1);
 	}
 
 	html {
