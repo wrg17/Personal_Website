@@ -4,7 +4,7 @@
 	const title = 'Project One';
 </script>
 
-<SEO title={title} description="Placeholder project detail page." />
+<SEO {title} description="Placeholder project detail page." />
 
 <article>
 	<div class="tile glass banner">
@@ -31,7 +31,11 @@
 
 	<section class="tile glass">
 		<h2>Graph of Function Relations</h2>
-		<img src="/projects/p1/graph_theory.png" alt="Graph of function relations for project one." loading="lazy" />
+		<img
+			src="/projects/p1/graph_theory.png"
+			alt="Graph of function relations for project one."
+			loading="lazy"
+		/>
 	</section>
 
 	<section class="tile glass proof-links">
