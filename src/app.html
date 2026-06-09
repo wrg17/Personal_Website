@@ -1,13 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="shortcut icon" href="static/img/dino.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%svelte.head%
+		<meta
+			name="description"
+			content="William George — software engineer and U-M graduate. Projects, hobbies, and contact."
+		/>
+		<meta name="author" content="William George" />
+		<meta name="theme-color" content="#0093dd" />
+		<link rel="icon" type="image/png" href="%sveltekit.assets%/img/dino.png" />
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/img/dino.png" />
+		%sveltekit.head%
 	</head>
-	<body>
-		<div>%svelte.body%</div>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
