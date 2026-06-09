@@ -59,28 +59,27 @@
 		display: flex;
 		align-items: center;
 		height: 100px;
-		background-color: slateblue;
+		background-image: var(--accent-gradient);
 		padding: 0 1.5rem;
+		color: var(--text-on-accent);
 	}
 
 	.banner-back-link {
 		display: inline-flex;
 		align-items: center;
+		color: var(--text-on-accent);
 	}
 
 	.banner-back {
-		height: 40px;
-		width: 40px;
-		fill: white;
+		height: 32px;
+		width: 32px;
+		fill: currentColor;
 	}
 
 	.banner-title {
-		padding: 0.5rem 1rem;
-		border-radius: 10px;
-		background-color: white;
-		color: black;
 		margin: 0 auto;
-		font-size: 1.25rem;
+		font-size: 1.5rem;
+		color: var(--text-on-accent);
 	}
 
 	.proof-links {

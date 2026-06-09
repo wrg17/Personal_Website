@@ -1,26 +1,29 @@
 :root {
-	--color-primary: #0066a8;
-	--color-secondary: #b30000;
-	--color-secondary-hover: #6b6b00;
+	color-scheme: light;
 
-	--color-background-gradient-primary: rgb(255, 102, 0);
-	--color-background-gradient-secondary: rgb(80, 5, 95);
-	--color-background-gradient-tertiary: rgb(160, 25, 83);
+	--bg-base: #fafafa;
+	--bg-base-2: #f4f4f5;
+	--bg-orange-glow: rgba(249, 115, 22, 0.18);
 
-	--color-glass-primary: rgba(0, 0, 0, 0.4);
-	--color-glass-secondary: rgba(18, 0, 254, 0.2);
+	--surface: rgba(255, 255, 255, 0.65);
+	--surface-strong: rgba(255, 255, 255, 0.85);
+	--surface-border: rgba(0, 0, 0, 0.08);
+	--surface-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 
-	--text-primary: #000000;
-	--text-secondary: #5a4400;
-	--text-secondary-hover: #2d2200;
+	--text-primary: #0a0a0a;
+	--text-secondary: #525252;
+	--text-muted: #737373;
+	--text-on-accent: #ffffff;
 
-	--incorrect: #b22020;
-	--correct: #1f7a1f;
-	--unfinished: #ffffff;
+	--accent-start: #fb923c;
+	--accent-mid: #f97316;
+	--accent-end: #ea580c;
+	--accent-gradient: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
 
-	--card: #0066a8;
-	--card-secondary: #00496e;
+	--color-primary: var(--accent-mid);
+	--color-secondary: var(--accent-end);
+	--color-secondary-hover: var(--accent-start);
 
-	--border-radius: 10px;
-	--header-shadow: rgba(57, 63, 72, 0.4);
+	--border-radius: 12px;
+	--icon-filter: none;
 }

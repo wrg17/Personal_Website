@@ -1,26 +1,29 @@
 :root {
-	--color-primary: #66e0ff;
-	--color-secondary: #ffffff;
-	--color-secondary-hover: #fff258;
+	color-scheme: dark;
 
-	--color-background-gradient-primary: rgba(0, 180, 160, 0.85);
-	--color-background-gradient-secondary: rgb(0, 0, 0);
-	--color-background-gradient-tertiary: rgb(16, 67, 67);
+	--bg-base: #0a0a0a;
+	--bg-base-2: #18181b;
+	--bg-orange-glow: rgba(249, 115, 22, 0.22);
 
-	--color-glass-primary: rgba(0, 0, 0, 0.4);
-	--color-glass-secondary: rgba(18, 0, 254, 0.2);
+	--surface: rgba(24, 24, 27, 0.55);
+	--surface-strong: rgba(24, 24, 27, 0.8);
+	--surface-border: rgba(255, 255, 255, 0.08);
+	--surface-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 
-	--text-primary: #ffffff;
-	--text-secondary: #ffffff;
-	--text-secondary-hover: #cfcfcf;
+	--text-primary: #fafafa;
+	--text-secondary: #a1a1aa;
+	--text-muted: #71717a;
+	--text-on-accent: #0a0a0a;
 
-	--incorrect: #ff6b6b;
-	--correct: #6bff6b;
-	--unfinished: #ffffff;
+	--accent-start: #fdba74;
+	--accent-mid: #fb923c;
+	--accent-end: #f97316;
+	--accent-gradient: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
 
-	--card: #0093dd;
-	--card-secondary: #00679b;
+	--color-primary: var(--accent-mid);
+	--color-secondary: var(--accent-mid);
+	--color-secondary-hover: var(--accent-start);
 
-	--border-radius: 10px;
-	--header-shadow: rgba(57, 63, 72, 0.4);
+	--border-radius: 12px;
+	--icon-filter: invert(1);
 }

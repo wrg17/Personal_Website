@@ -94,6 +94,7 @@
 	.icons img {
 		height: 25px;
 		width: 25px;
+		filter: var(--icon-filter);
 	}
 
 	.header_bio {
@@ -121,9 +122,12 @@
 	}
 
 	.header_links a.active {
-		text-shadow: 0.1em 0 0 black;
-		border-bottom: 2px solid var(--color-secondary);
-		color: var(--text-secondary);
+		color: var(--text-primary);
+		background-image: var(--accent-gradient);
+		background-repeat: no-repeat;
+		background-position: 0 100%;
+		background-size: 100% 3px;
+		padding-bottom: 4px;
 	}
 
 	.header_links a:hover:not(.active),
@@ -146,15 +150,18 @@
 		background-position: 50% 1%;
 		background-size: cover;
 		background-image: url('/img/Self_Portrait.jpg');
-		border: 2px solid var(--color-secondary);
+		box-shadow:
+			0 0 0 2px var(--bg-base),
+			0 0 0 4px var(--accent-mid);
 		transition: transform 0.2s ease-in-out;
 	}
 
 	.user_info:hover,
 	.user_info:focus-visible {
 		transform: scale(1.08);
-		outline: 2px solid var(--color-secondary);
-		outline-offset: 2px;
+		box-shadow:
+			0 0 0 2px var(--bg-base),
+			0 0 0 4px var(--accent-start);
 	}
 
 	@media (max-width: 640px) {
