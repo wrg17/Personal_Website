@@ -1,15 +1,3 @@
-<footer>
+<footer class="mt-8 flex w-full justify-center bg-black/50 px-4 py-6 text-ink">
 	<small>© {new Date().getFullYear()} William George</small>
 </footer>
-
-<style>
-	footer {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		padding: 1.5rem 1rem;
-		background-color: rgba(0, 0, 0, 0.5);
-		color: var(--text-primary);
-		margin-top: 2rem;
-	}
-</style>
