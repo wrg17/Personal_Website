@@ -27,11 +27,11 @@
 			// ignore — storage unavailable
 		}
 	});
-</script>
 
-<svelte:head>
-	<link rel="stylesheet" href={`/theme/${$theme}.css`} />
-</svelte:head>
+	$effect(() => {
+		document.documentElement.classList.toggle('dark', $theme === 'dark');
+	});
+</script>
 
 <Header {current} />
 
