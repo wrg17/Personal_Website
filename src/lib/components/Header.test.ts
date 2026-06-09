@@ -1,9 +1,11 @@
-import { beforeEach, describe, expect, it } from 'vitest';
-import { get } from 'svelte/store';
+import { theme } from '$lib/stores';
+
 import { render, screen } from '@testing-library/svelte';
 import userEvent from '@testing-library/user-event';
+import { get } from 'svelte/store';
+import { beforeEach, describe, expect, it } from 'vitest';
+
 import Header from './Header.svelte';
-import { theme } from '$lib/stores';
 
 describe('Header', () => {
 	beforeEach(() => {

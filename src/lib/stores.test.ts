@@ -1,5 +1,6 @@
-import { describe, expect, it } from 'vitest';
 import { get } from 'svelte/store';
+import { describe, expect, it } from 'vitest';
+
 import { theme } from './stores';
 
 describe('theme store', () => {

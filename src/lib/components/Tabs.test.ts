@@ -1,6 +1,7 @@
-import { describe, expect, it, vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import userEvent from '@testing-library/user-event';
+import { describe, expect, it, vi } from 'vitest';
+
 import Tabs from './Tabs.svelte';
 
 describe('Tabs', () => {
