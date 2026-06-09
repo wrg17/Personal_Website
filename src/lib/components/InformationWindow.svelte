@@ -1,93 +1,73 @@
-<script>
-    export let proj_title
-    export let proj_img
-    export let proj_img_des
-    export let proj_des
-    export let proj_link
+<script lang="ts">
+	import type { Project } from '$lib/types';
+
+	let { title, image, imageAlt, description, link }: Project = $props();
 </script>
 
-
-<div class="window">
-    <a href={proj_link}>
-        <div class="project-img-style">
-            <h1 class="project-title-style">{proj_title}</h1>
-        </div>
-        <div class="project-description-style glass">
-            <div class="text"> {proj_des} </div>
-        </div>
-    </a>
-</div>
-
+<a class="window" href={link}>
+	<div class="project-img-style">
+		<img src={image} alt={imageAlt} loading="lazy" />
+		<h2 class="project-title-style">{title}</h2>
+	</div>
+	<div class="project-description-style glass">
+		<p class="text">{description}</p>
+	</div>
+</a>
 
 <style>
-    .window {
-        overflow: hidden;
-        flex-direction: column;
+	.window {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		text-align: center;
+		height: 100%;
+		width: 100%;
+		border-radius: 12px;
+		box-sizing: border-box;
+		color: inherit;
+		text-decoration: none;
+		background-color: rgba(0, 0, 0, 0.2);
+		transition: transform 0.2s ease-in-out;
+	}
 
-        cursor: pointer;
-        text-align: center;
+	.window:hover,
+	.window:focus-visible {
+		transform: translateY(-3px);
+		outline: 2px solid var(--color-secondary);
+		outline-offset: 2px;
+	}
 
-        height: 100%;
-        width: 100%;
+	.project-img-style {
+		position: relative;
+		flex: 1 1 auto;
+		min-height: 160px;
+		overflow: hidden;
+	}
 
-        padding: 0;
+	.project-img-style img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
 
-        border-radius: 10%;
-        //border: 2px solid white;
-        box-sizing: border-box;
+	.project-title-style {
+		position: absolute;
+		inset: 0;
+		display: grid;
+		place-items: center;
+		margin: 0;
+		color: white;
+		text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+	}
 
-        margin: 0;
-    }
+	.project-description-style {
+		padding: 0.75rem 1rem;
+	}
 
-    .project-img-style {
-        position: relative;
-
-        height: 70%;
-        width: 100%;
-
-        background-image: url("static/img/ocean.jpeg");
-        opacity: 90%;
-        background-size: cover;
-    }
-
-    .project-title-style {
-        position: absolute;
-        margin: auto;
-
-        top: 40%;
-
-        opacity: 100%;
-        color: black;
-    }
-
-    .project-description-style {
-        height: 30%;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    h1 {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        text-align: center;
-        position: absolute;
-        color: white;
-    }
-
-    .text {
-        position: relative;
-        height: auto;
-        width: auto;
-        margin-top: 1%;
-        margin-bottom: 5%;
-        margin-left: 5%;
-        margin-right: 5%;
-        display: block;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: white;
-        overflow-wrap: break-word;
-    }
+	.text {
+		margin: 0;
+		color: white;
+		overflow-wrap: break-word;
+	}
 </style>

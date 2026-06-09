@@ -1,48 +1,53 @@
-<script>
-    import { createEventDispatcher } from 'svelte'
-    const dispatch = createEventDispatcher();
+<script lang="ts">
+	interface Props {
+		items: string[];
+		activeItem: string;
+		onTabChange?: (item: string) => void;
+	}
 
-    export let items;
-    export let activeItem;
+	let { items, activeItem, onTabChange }: Props = $props();
 </script>
 
 <div class="tabs">
-    <ul>
-        {#each items as item}
-            <li on:click={() => dispatch('tabChange', item)}>
-                <div class="both {item === activeItem ? 'active' : 'inactive'}">{item}</div>
-            </li>
-        {/each}
-    </ul>
+	<ul>
+		{#each items as item}
+			<li>
+				<button
+					type="button"
+					class:active={item === activeItem}
+					onclick={() => onTabChange?.(item)}
+				>
+					{item}
+				</button>
+			</li>
+		{/each}
+	</ul>
 </div>
 
 <style>
-    .tabs {
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		display: flex;
+		gap: 0.5rem;
+	}
 
-    }
+	button {
+		all: unset;
+		cursor: pointer;
+		padding: 0.5rem 0.75rem;
+		font-size: 1rem;
+		color: var(--text-primary);
+	}
 
-    ul {
-        padding: 0;
-        list-style-type: none;
-    }
+	button.active {
+		color: #ff3e00;
+		border-bottom: 2px solid #ff3e00;
+	}
 
-    li {
-        font-size: 18px;
-        color: white;
-        cursor: pointer;
-    }
-
-    .both {
-        padding: 8px;
-    }
-
-    .active {
-        color: #ff3e00;
-        border-bottom: 2px solid #ff3e00;
-
-    }
-
-    .inactive {
-
-    }
+	button:focus-visible {
+		outline: 2px solid var(--color-secondary);
+		outline-offset: 2px;
+	}
 </style>
