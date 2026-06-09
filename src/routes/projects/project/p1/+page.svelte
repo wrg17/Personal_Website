@@ -6,11 +6,17 @@
 
 <SEO {title} description="Placeholder project detail page." />
 
-<article>
-	<div class="tile glass banner">
-		<a href="/projects" aria-label="Back to projects" class="banner-back-link">
+<article class="flex flex-col gap-6">
+	<div
+		class="glass bg-accent-gradient sticky top-0 flex h-[100px] items-center overflow-hidden rounded-[10px] px-6 text-ink-on-accent"
+	>
+		<a
+			href="/projects"
+			aria-label="Back to projects"
+			class="inline-flex items-center text-ink-on-accent"
+		>
 			<svg
-				class="banner-back"
+				class="h-8 w-8 fill-current"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 122.88 108.06"
 				aria-hidden="true"
@@ -21,78 +27,26 @@
 				/>
 			</svg>
 		</a>
-		<h1 class="banner-title">{title}</h1>
+		<h1 class="mx-auto my-0 text-2xl text-ink-on-accent">{title}</h1>
 	</div>
 
-	<section class="tile glass">
+	<section class="glass rounded-[10px] p-6">
 		<h2>Description</h2>
 		<p>Placeholder description — replace with the real project write-up.</p>
 	</section>
 
-	<section class="tile glass">
+	<section class="glass rounded-[10px] p-6">
 		<h2>Graph of Function Relations</h2>
 		<img
+			class="h-auto max-w-full"
 			src="/projects/p1/graph_theory.png"
 			alt="Graph of function relations for project one."
 			loading="lazy"
 		/>
 	</section>
 
-	<section class="tile glass proof-links">
+	<section class="glass flex flex-col rounded-[10px] p-6">
 		<h2>Links to Associated Proofs</h2>
 		<p>Placeholder — add real reference links here.</p>
 	</section>
 </article>
-
-<style>
-	article {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-
-	.tile {
-		border-radius: 10px;
-		padding: 1.5rem;
-	}
-
-	.banner {
-		position: sticky;
-		top: 0;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		height: 100px;
-		background-image: var(--accent-gradient);
-		padding: 0 1.5rem;
-		color: var(--text-on-accent);
-	}
-
-	.banner-back-link {
-		display: inline-flex;
-		align-items: center;
-		color: var(--text-on-accent);
-	}
-
-	.banner-back {
-		height: 32px;
-		width: 32px;
-		fill: currentColor;
-	}
-
-	.banner-title {
-		margin: 0 auto;
-		font-size: 1.5rem;
-		color: var(--text-on-accent);
-	}
-
-	.proof-links {
-		display: flex;
-		flex-direction: column;
-	}
-
-	img {
-		max-width: 100%;
-		height: auto;
-	}
-</style>
