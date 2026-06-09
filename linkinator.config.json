@@ -1,0 +1,9 @@
+{
+	"recurse": true,
+	"silent": true,
+	"skip": [
+		"^https?://(www\\.)?linkedin\\.com",
+		"^https?://(www\\.)?github\\.com",
+		"^https?://localhost:\\d+/[^/]+/(_app|img|theme|favicon|projects)/"
+	]
+}
