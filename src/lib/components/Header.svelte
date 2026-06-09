@@ -53,9 +53,24 @@
 			</div>
 		</div>
 		<nav class="header_links" aria-label="Primary">
-			<a id="home" href="/" class:active={current === 'home'} aria-current={current === 'home' ? 'page' : undefined}>Home</a>
-			<a id="projects" href="/projects" class:active={current === 'projects'} aria-current={current === 'projects' ? 'page' : undefined}>Projects</a>
-			<a id="hobbies" href="/hobbies" class:active={current === 'hobbies'} aria-current={current === 'hobbies' ? 'page' : undefined}>Hobbies</a>
+			<a
+				id="home"
+				href="/"
+				class:active={current === 'home'}
+				aria-current={current === 'home' ? 'page' : undefined}>Home</a
+			>
+			<a
+				id="projects"
+				href="/projects"
+				class:active={current === 'projects'}
+				aria-current={current === 'projects' ? 'page' : undefined}>Projects</a
+			>
+			<a
+				id="hobbies"
+				href="/hobbies"
+				class:active={current === 'hobbies'}
+				aria-current={current === 'hobbies' ? 'page' : undefined}>Hobbies</a
+			>
 		</nav>
 	</div>
 </header>
