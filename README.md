@@ -1,40 +1,55 @@
-# create-svelte
+# Personal Website — William George
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Personal site built with SvelteKit 2 + Svelte 5, deployed to Netlify.
 
-## Creating a project
+## Requirements
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Node 24 LTS (see `.nvmrc`)
+- npm 10+
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Quickstart
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+nvm use            # picks up .nvmrc
+npm install
+npm run dev        # local dev server at http://localhost:5173
 ```
 
-## Building
+## Scripts
 
-To create a production version of your app:
+| Script            | What it does                                     |
+| ----------------- | ------------------------------------------------ |
+| `npm run dev`     | Vite dev server with HMR                         |
+| `npm run build`   | Production build via `@sveltejs/adapter-netlify` |
+| `npm run preview` | Preview the production build locally             |
+| `npm run check`   | Type-check Svelte + TS                           |
+| `npm run lint`    | Prettier + ESLint                                |
+| `npm run format`  | Prettier write                                   |
 
-```bash
-npm run build
+## Project layout
+
+```
+src/
+  app.html         # HTML shell
+  app.css          # Global styles
+  app.d.ts         # Ambient types
+  lib/
+    assets/        # SVG icons bundled via Vite
+    components/    # Reusable UI
+    data/          # Static content (projects, hobbies)
+    stores.ts      # Theme store
+    types.d.ts
+  routes/
+    +layout.svelte
+    +page.svelte
+    hobbies/+page.svelte
+    projects/+page.svelte
+    projects/project/p1/+page.svelte
+static/
+  img/             # Photos, favicons (served from /)
+  theme/           # Theme CSS swapped at runtime
 ```
 
-You can preview the production build with `npm run preview`.
+## Deploy
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+The repository is connected to Netlify; merges to `main` trigger a build. Build artifacts (`build/`, `.netlify/`, `.svelte-kit/`) are ignored from source control.

@@ -1,20 +1,11 @@
-import netlify from '@sveltejs/adapter-netlify';
-import preprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-netlify';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
-	preprocess: preprocess(),
-
+	preprocess: vitePreprocess(),
 	kit: {
-		adapter: netlify({
-			split: false
-		})
-		//target: '#svelte',
-		//methodOverride: {
-		//	allowed: ['PATCH', 'DELETE']
-		//}
+		adapter: adapter()
 	}
 };
 
