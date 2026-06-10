@@ -11,8 +11,8 @@ describe('Tabs', () => {
 		const buttons = screen.getAllByRole('button');
 		expect(buttons).toHaveLength(3);
 
-		expect(screen.getByRole('button', { name: 'Two' })).toHaveClass('active');
-		expect(screen.getByRole('button', { name: 'One' })).not.toHaveClass('active');
+		expect(screen.getByRole('button', { name: 'Two' })).toHaveClass('tab-active');
+		expect(screen.getByRole('button', { name: 'One' })).not.toHaveClass('tab-active');
 	});
 
 	it('calls onTabChange with the clicked item', async () => {

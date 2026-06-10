@@ -27,26 +27,16 @@
 			// ignore — storage unavailable
 		}
 	});
-</script>
 
-<svelte:head>
-	<link rel="stylesheet" href={`/theme/${$theme}.css`} />
-</svelte:head>
+	$effect(() => {
+		document.documentElement.classList.toggle('dark', $theme === 'dark');
+	});
+</script>
 
 <Header {current} />
 
-<main class="content">
+<main class="relative z-[1] min-h-[70vh] px-[clamp(1rem,5vw,170px)] py-8 text-ink">
 	{@render children()}
 </main>
 
 <Footer />
-
-<style>
-	.content {
-		position: relative;
-		padding: 2rem clamp(1rem, 5vw, 170px);
-		z-index: 1;
-		color: var(--text-primary);
-		min-height: 70vh;
-	}
-</style>
