@@ -32,10 +32,8 @@
 		document.documentElement.classList.toggle('dark', $theme === 'dark');
 	});
 
-	afterNavigate((nav) => {
-		if (nav.type !== 'popstate') {
-			window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-		}
+	afterNavigate(() => {
+		window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 	});
 </script>
 
