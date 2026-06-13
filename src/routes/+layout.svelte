@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { theme } from '$lib/stores';
 	import type { Theme } from '$lib/stores';
@@ -29,6 +30,12 @@
 
 	$effect(() => {
 		document.documentElement.classList.toggle('dark', $theme === 'dark');
+	});
+
+	afterNavigate((nav) => {
+		if (nav.type !== 'popstate') {
+			window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+		}
 	});
 </script>
 
