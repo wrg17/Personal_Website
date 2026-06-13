@@ -11,6 +11,13 @@
 		<meta name="theme-color" content="#0093dd" />
 		<link rel="icon" type="image/png" href="%sveltekit.assets%/img/dino.png" />
 		<link rel="apple-touch-icon" href="%sveltekit.assets%/img/dino.png" />
+		<script>
+			try {
+				if (localStorage.getItem('theme') === 'dark') {
+					document.documentElement.classList.add('dark');
+				}
+			} catch {}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
