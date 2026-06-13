@@ -1,7 +1,7 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
-const routes = ['/', '/projects', '/hobbies', '/projects/project/p1'];
+const routes = ['/', '/about', '/projects', '/projects/project-one', '/resume', '/contact'];
 
 for (const path of routes) {
 	test(`${path} has no serious or critical a11y violations`, async ({ page }) => {

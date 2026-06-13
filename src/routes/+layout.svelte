@@ -15,7 +15,6 @@
 		const path = $page.url.pathname;
 		if (path === '/') return 'home';
 		if (path.startsWith('/projects')) return 'projects';
-		if (path.startsWith('/hobbies')) return 'hobbies';
 		return path.slice(1);
 	});
 

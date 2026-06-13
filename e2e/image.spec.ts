@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 test.describe('card image delivery', () => {
-	for (const path of ['/projects', '/hobbies']) {
+	for (const path of ['/projects', '/']) {
 		test(`${path} card serves an AVIF variant in Chromium`, async ({ page }) => {
 			await page.goto(path);
 

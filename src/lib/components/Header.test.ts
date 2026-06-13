@@ -17,7 +17,7 @@ describe('Header', () => {
 
 		expect(screen.getByRole('link', { name: 'Projects' })).toHaveAttribute('aria-current', 'page');
 		expect(screen.getByRole('link', { name: 'Home' })).not.toHaveAttribute('aria-current');
-		expect(screen.getByRole('link', { name: 'Hobbies' })).not.toHaveAttribute('aria-current');
+		expect(screen.getByRole('link', { name: 'About' })).not.toHaveAttribute('aria-current');
 	});
 
 	it('toggles the theme store and persists to localStorage when the avatar button is clicked', async () => {

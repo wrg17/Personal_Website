@@ -63,15 +63,20 @@ src/
   lib/
     assets/        # SVG icons bundled via Vite
     components/    # Reusable UI
-    data/          # Static content (projects, hobbies)
+    data/          # Static content (projects, profile)
     stores.ts      # Theme store
     types.d.ts
   routes/
     +layout.svelte
     +page.svelte
-    hobbies/+page.svelte
+    about/+page.svelte
+    contact/+page.svelte
     projects/+page.svelte
-    projects/project/p1/+page.svelte
+    projects/[slug]/+page.svelte
+    resume/+page.svelte
+    sitemap.xml/+server.ts
+    robots.txt/+server.ts
+    +error.svelte
 static/
   img/             # Photos, favicons (served from /)
   theme/           # Theme CSS swapped at runtime

@@ -24,5 +24,5 @@ test('sitemap.xml is served and lists at least the static and project routes', a
 	expect(body).toContain('<urlset');
 	expect(body).toContain('/projects/project-one</loc>');
 	expect(body).toContain('/projects</loc>');
-	expect(body).toContain('/hobbies</loc>');
+	expect(body).toContain('/about</loc>');
 });

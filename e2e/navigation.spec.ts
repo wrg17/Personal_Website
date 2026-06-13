@@ -8,9 +8,9 @@ test('header nav routes between pages', async ({ page }) => {
 	await expect(page).toHaveURL('/projects');
 	await expect(page.getByRole('heading', { name: 'Project One', level: 2 })).toBeVisible();
 
-	await headerNav.getByRole('link', { name: 'Hobbies' }).click();
-	await expect(page).toHaveURL('/hobbies');
-	await expect(page.getByRole('heading', { name: /Hobby placeholder/i, level: 2 })).toBeVisible();
+	await headerNav.getByRole('link', { name: 'About' }).click();
+	await expect(page).toHaveURL('/about');
+	await expect(page.getByRole('heading', { name: 'About', level: 1 })).toBeVisible();
 
 	await headerNav.getByRole('link', { name: 'Home' }).click();
 	await expect(page).toHaveURL('/');

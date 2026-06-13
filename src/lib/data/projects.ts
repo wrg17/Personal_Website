@@ -19,19 +19,6 @@ export const projects: Project[] = [
 
 export const featuredProjects = projects.filter((p) => p.featured);
 
-export const hobbies: Project[] = [
-	{
-		slug: 'hobby-placeholder',
-		title: 'Hobby placeholder',
-		image: '/img/ocean-800.jpeg',
-		imageSrcset: oceanSrcset,
-		imageAvifSrcset: oceanAvifSrcset,
-		imageAlt: 'Placeholder hobby thumbnail',
-		description: 'Placeholder description — replace with a real hobby write-up.',
-		link: '#'
-	}
-];
-
 export function findProject(slug: string): Project | undefined {
 	return projects.find((p) => p.slug === slug);
 }

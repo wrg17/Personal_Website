@@ -24,8 +24,7 @@
 		{ id: 'about', href: '/about', label: 'About', key: 'about' },
 		{ id: 'projects', href: '/projects', label: 'Projects', key: 'projects' },
 		{ id: 'resume', href: '/resume', label: 'Resume', key: 'resume' },
-		{ id: 'contact', href: '/contact', label: 'Contact', key: 'contact' },
-		{ id: 'hobbies', href: '/hobbies', label: 'Hobbies', key: 'hobbies' }
+		{ id: 'contact', href: '/contact', label: 'Contact', key: 'contact' }
 	] as const;
 </script>
 

@@ -6,7 +6,7 @@ export const prerender = true;
 
 const SITE_URL = 'https://williamgeorge.dev';
 
-const staticRoutes = ['/', '/about', '/projects', '/resume', '/contact', '/hobbies'];
+const staticRoutes = ['/', '/about', '/projects', '/resume', '/contact'];
 
 export const GET: RequestHandler = () => {
 	const urls = [

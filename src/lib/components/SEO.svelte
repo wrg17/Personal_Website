@@ -9,7 +9,7 @@
 
 	let {
 		title,
-		description = 'William George — personal site, projects, and hobbies.',
+		description = 'William George — portfolio, projects, and contact.',
 		image = '/img/Self_Portrait-1200.jpg',
 		url = '',
 		type = 'website'
