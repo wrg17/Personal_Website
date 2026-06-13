@@ -1,7 +1,6 @@
 import type { Project } from '$lib/types';
 
-const oceanSrcset =
-	'/img/ocean-480.jpeg 480w, /img/ocean-800.jpeg 800w, /img/ocean-1200.jpeg 1200w';
+const oceanSrcset = '/img/ocean-480.jpeg 480w, /img/ocean-800.jpeg 800w';
 
 export const projects: Project[] = [
 	{

@@ -13,7 +13,7 @@
 			class="block h-full w-full object-cover"
 			src={image}
 			srcset={imageSrcset}
-			sizes={imageSrcset ? '(min-width: 1200px) 380px, (min-width: 640px) 45vw, 90vw' : undefined}
+			sizes={imageSrcset ? '(min-width: 1200px) 310px, (min-width: 640px) 40vw, 90vw' : undefined}
 			alt={imageAlt}
 			width="800"
 			height="523"
