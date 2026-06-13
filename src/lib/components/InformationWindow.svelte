@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Project } from '$lib/types';
 
-	let { title, image, imageAlt, description, link }: Project = $props();
+	let { title, image, imageSrcset, imageAlt, description, link }: Project = $props();
 </script>
 
 <a
@@ -9,7 +9,17 @@
 	href={link}
 >
 	<div class="relative min-h-40 flex-auto overflow-hidden">
-		<img class="block h-full w-full object-cover" src={image} alt={imageAlt} loading="lazy" />
+		<img
+			class="block h-full w-full object-cover"
+			src={image}
+			srcset={imageSrcset}
+			sizes={imageSrcset ? '(min-width: 1200px) 380px, (min-width: 640px) 45vw, 90vw' : undefined}
+			alt={imageAlt}
+			width="800"
+			height="523"
+			loading="lazy"
+			decoding="async"
+		/>
 		<h2
 			class="absolute inset-0 m-0 grid place-items-center text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]"
 		>

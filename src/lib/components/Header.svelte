@@ -31,7 +31,7 @@
 		<div class="flex items-center gap-3">
 			<button
 				type="button"
-				class="inline-block size-[70px] cursor-pointer appearance-none rounded-full border-0 bg-[url('/img/Self_Portrait.jpg')] bg-cover bg-[position:50%_1%] bg-no-repeat shadow-[0_0_0_2px_var(--color-canvas),0_0_0_4px_var(--color-accent)] transition-transform duration-200 ease-in-out hover:scale-[1.08] hover:shadow-[0_0_0_2px_var(--color-canvas),0_0_0_4px_var(--color-accent-soft)] focus-visible:scale-[1.08] focus-visible:shadow-[0_0_0_2px_var(--color-canvas),0_0_0_4px_var(--color-accent-soft)]"
+				class="inline-block size-[70px] cursor-pointer appearance-none rounded-full border-0 bg-[url('/img/Self_Portrait-200.jpg')] bg-cover bg-[position:50%_1%] bg-no-repeat shadow-[0_0_0_2px_var(--color-canvas),0_0_0_4px_var(--color-accent)] transition-transform duration-200 ease-in-out hover:scale-[1.08] hover:shadow-[0_0_0_2px_var(--color-canvas),0_0_0_4px_var(--color-accent-soft)] focus-visible:scale-[1.08] focus-visible:shadow-[0_0_0_2px_var(--color-canvas),0_0_0_4px_var(--color-accent-soft)]"
 				aria-label="Toggle color theme"
 				aria-pressed={$theme === 'dark'}
 				onclick={togglePalette}

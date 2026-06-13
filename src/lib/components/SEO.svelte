@@ -10,7 +10,7 @@
 	let {
 		title,
 		description = 'William George — personal site, projects, and hobbies.',
-		image = '/img/Self_Portrait.jpg',
+		image = '/img/Self_Portrait-1200.jpg',
 		url = '',
 		type = 'website'
 	}: Props = $props();
