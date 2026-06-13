@@ -1,5 +1,22 @@
 import { expect, test } from '@playwright/test';
 
+test('dark class is on <html> at DOMContentLoaded when localStorage prefers dark', async ({
+	page
+}) => {
+	await page.addInitScript(() => {
+		try {
+			localStorage.setItem('theme', 'dark');
+		} catch {
+			// ignore
+		}
+	});
+
+	await page.goto('/', { waitUntil: 'domcontentloaded' });
+
+	const hasDark = await page.evaluate(() => document.documentElement.classList.contains('dark'));
+	expect(hasDark).toBe(true);
+});
+
 test('theme toggle flips the dark class on <html> and persists across reload', async ({ page }) => {
 	await page.goto('/');
 
