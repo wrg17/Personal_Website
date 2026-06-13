@@ -8,7 +8,7 @@
 
 <article class="flex flex-col gap-6">
 	<div
-		class="glass bg-accent-gradient sticky top-0 flex h-[100px] items-center overflow-hidden rounded-[10px] px-6 text-ink-on-accent"
+		class="glass bg-accent-gradient rounded-base sticky top-0 flex h-[100px] items-center overflow-hidden px-6 text-ink-on-accent"
 	>
 		<a
 			href="/projects"
@@ -30,12 +30,12 @@
 		<h1 class="mx-auto my-0 text-2xl text-ink-on-accent">{title}</h1>
 	</div>
 
-	<section class="glass rounded-[10px] p-6">
+	<section class="glass rounded-base p-6">
 		<h2>Description</h2>
 		<p>Placeholder description — replace with the real project write-up.</p>
 	</section>
 
-	<section class="glass rounded-[10px] p-6">
+	<section class="glass rounded-base p-6">
 		<h2>Graph of Function Relations</h2>
 		<img
 			class="h-auto max-w-full"

@@ -30,7 +30,7 @@
 	--shadow-glow-strong: 0 0 48px 0 rgba(249, 115, 22, 0.55);
 
 	/* Radii */
-	--radius-base: 12px;
+	--radius-base: 10px;
 }
 
 @layer base {
@@ -124,6 +124,29 @@
 		var(--color-accent-soft) 0%,
 		var(--color-accent-strong) 100%
 	);
+}
+
+@utility profile-button {
+	@apply inline-block size-[70px] cursor-pointer appearance-none rounded-full border-0 bg-cover bg-no-repeat p-0 transition-transform duration-200 ease-in-out;
+	background-image: url('/img/Self_Portrait-200.jpg');
+	background-position: 50% 1%;
+	box-shadow:
+		0 0 0 2px var(--color-canvas),
+		0 0 0 4px var(--color-accent);
+
+	&:hover,
+	&:focus-visible {
+		transform: scale(1.08);
+		box-shadow:
+			0 0 0 2px var(--color-canvas),
+			0 0 0 4px var(--color-accent-soft);
+	}
+}
+
+@utility nav-active-underline {
+	@apply bg-accent-gradient bg-no-repeat pb-1;
+	background-position: 0 100%;
+	background-size: 100% 3px;
 }
 
 @supports not (backdrop-filter: blur(1px)) {

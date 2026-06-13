@@ -31,12 +31,12 @@
 		<div class="flex items-center gap-3">
 			<button
 				type="button"
-				class="inline-block size-[70px] cursor-pointer appearance-none rounded-full border-0 bg-[url('/img/Self_Portrait-200.jpg')] bg-cover bg-[position:50%_1%] bg-no-repeat shadow-[0_0_0_2px_var(--color-canvas),0_0_0_4px_var(--color-accent)] transition-transform duration-200 ease-in-out hover:scale-[1.08] hover:shadow-[0_0_0_2px_var(--color-canvas),0_0_0_4px_var(--color-accent-soft)] focus-visible:scale-[1.08] focus-visible:shadow-[0_0_0_2px_var(--color-canvas),0_0_0_4px_var(--color-accent-soft)]"
+				class="profile-button"
 				aria-label="Toggle color theme"
 				aria-pressed={$theme === 'dark'}
 				onclick={togglePalette}
 			></button>
-			<div class="glass overflow-hidden rounded-[10px] px-4 py-2">
+			<div class="glass rounded-base overflow-hidden px-4 py-2">
 				<div class="pb-0.5"><span>William George</span></div>
 				<div class="flex justify-center gap-2">
 					<a
@@ -71,7 +71,7 @@
 					class={[
 						'inline-block px-2 py-1 text-ink no-underline transition-colors duration-150 ease-in',
 						isActive
-							? 'bg-accent-gradient bg-no-repeat pb-1 [background-position:0_100%] [background-size:100%_3px]'
+							? 'nav-active-underline'
 							: 'hover:text-accent-strong focus-visible:text-accent-strong dark:hover:text-accent dark:focus-visible:text-accent'
 					]}>{item.label}</a
 				>
