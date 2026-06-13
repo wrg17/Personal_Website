@@ -2,7 +2,7 @@
 	import InformationWindowsContainer from '$lib/components/InformationWindowsContainer.svelte';
 	import SEO from '$lib/components/SEO.svelte';
 	import { featuredProjects } from '$lib/data/projects';
-	import { homeCTAs, positioningLine, statusLine } from '$lib/data/profile';
+	import { homeCTAs, positioningLine } from '$lib/data/profile';
 </script>
 
 <SEO title="William George" url="https://williamgeorge.dev/" />
@@ -11,13 +11,6 @@
 	<section class="glass rounded-base p-[clamp(1rem,3vw,3rem)]">
 		<h1 class="mt-0 mb-4 text-[clamp(1.5rem,3.5vw,2.5rem)]">I'm William George.</h1>
 		<p class="text-ink-muted m-0 text-[clamp(1rem,1.5vw,1.25rem)]">{positioningLine}</p>
-		{#if statusLine}
-			<p
-				class="bg-accent-gradient text-ink-on-accent mt-6 mb-0 inline-block rounded-full px-4 py-1.5 text-sm"
-			>
-				{statusLine}
-			</p>
-		{/if}
 	</section>
 
 	{#if featuredProjects.length > 0}
