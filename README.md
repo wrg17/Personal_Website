@@ -6,6 +6,8 @@ Personal site built with SvelteKit 2 + Svelte 5, deployed to Netlify.
 
 - Node 24 LTS (see `.nvmrc`)
 - npm 10+
+- macOS for image ingest scripts in `bin/` (relies on `sips`)
+- [`libavif`](https://github.com/AOMediaCodec/libavif) for AVIF encoding (`brew install libavif`) — only needed when adding new card images
 
 ## Quickstart
 
@@ -29,6 +31,14 @@ npm run dev        # local dev server at http://localhost:5173
 | `npm run test:e2e`   | Playwright E2E + axe a11y against `preview`                    |
 | `npm run test:links` | Linkinator crawl of `build/`                                   |
 | `npm run ci`         | Full local pipeline: lint → check → test → build → e2e → links |
+
+## bin
+
+Small repo-local scripts. Run from the repo root.
+
+| Script                                  | Purpose                                                                                                                   |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `bin/encode-card-image <source> <name>` | Generates 480w + 800w JPEG and AVIF variants of a source image into `static/img/` and prints a snippet for `projects.ts`. |
 
 ### Testing layout
 
