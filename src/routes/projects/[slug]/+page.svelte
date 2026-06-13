@@ -1,10 +1,12 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
+	import type { PageData } from './$types';
 
-	const title = 'Project One';
+	let { data }: { data: PageData } = $props();
+	const project = $derived(data.project);
 </script>
 
-<SEO {title} description="Placeholder project detail page." />
+<SEO title={project.title} description={project.description} />
 
 <article class="flex flex-col gap-6">
 	<div
@@ -27,26 +29,11 @@
 				/>
 			</svg>
 		</a>
-		<h1 class="mx-auto my-0 text-2xl text-ink-on-accent">{title}</h1>
+		<h1 class="mx-auto my-0 text-2xl text-ink-on-accent">{project.title}</h1>
 	</div>
 
 	<section class="glass rounded-base p-6">
 		<h2>Description</h2>
-		<p>Placeholder description — replace with the real project write-up.</p>
-	</section>
-
-	<section class="glass rounded-base p-6">
-		<h2>Graph of Function Relations</h2>
-		<img
-			class="h-auto max-w-full"
-			src="/projects/p1/graph_theory.png"
-			alt="Graph of function relations for project one."
-			loading="lazy"
-		/>
-	</section>
-
-	<section class="glass flex flex-col rounded-[10px] p-6">
-		<h2>Links to Associated Proofs</h2>
-		<p>Placeholder — add real reference links here.</p>
+		<p>{project.description}</p>
 	</section>
 </article>

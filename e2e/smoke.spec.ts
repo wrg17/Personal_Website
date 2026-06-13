@@ -19,7 +19,13 @@ test('hobbies page lists at least one hobby tile', async ({ page }) => {
 });
 
 test('project detail page renders banner heading', async ({ page }) => {
-	const response = await page.goto('/projects/project/p1');
+	const response = await page.goto('/projects/project-one');
 	expect(response?.status()).toBe(200);
 	await expect(page.getByRole('heading', { name: 'Project One', level: 1 })).toBeVisible();
+});
+
+test('unknown project slug returns 404', async ({ page }) => {
+	const response = await page.goto('/projects/no-such-project');
+	expect(response?.status()).toBe(404);
+	await expect(page.getByRole('heading', { name: /page not found/i, level: 1 })).toBeVisible();
 });

@@ -4,11 +4,12 @@ import { describe, expect, it } from 'vitest';
 import InformationWindow from './InformationWindow.svelte';
 
 const sampleProject = {
+	slug: 'sample-project',
 	title: 'Sample Project',
 	image: '/img/sample.jpg',
 	imageAlt: 'A sample',
 	description: 'A short description of the project.',
-	link: '/projects/project/p1'
+	link: '/projects/sample-project'
 };
 
 describe('InformationWindow', () => {
