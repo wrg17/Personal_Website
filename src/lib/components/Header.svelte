@@ -61,7 +61,7 @@
 			</div>
 		</div>
 		<nav
-			class="flex flex-grow flex-row flex-wrap justify-end gap-x-4 gap-y-2 max-sm:w-full max-sm:justify-center"
+			class="flex flex-grow flex-row flex-wrap justify-end gap-x-4 gap-y-2 max-sm:w-full max-sm:justify-center max-sm:gap-x-2 max-sm:text-sm"
 			aria-label="Primary"
 		>
 			{#each navItems as item}
@@ -71,7 +71,7 @@
 					href={item.href}
 					aria-current={isActive ? 'page' : undefined}
 					class={[
-						'inline-block px-2 py-1 text-ink no-underline transition-colors duration-150 ease-in',
+						'inline-block px-2 py-1 text-ink no-underline transition-colors duration-150 ease-in max-sm:px-1',
 						isActive
 							? 'nav-active-underline'
 							: 'hover:text-accent-strong focus-visible:text-accent-strong dark:hover:text-accent dark:focus-visible:text-accent'
