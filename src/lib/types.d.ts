@@ -18,4 +18,5 @@ export interface Project {
 	repoUrl?: string;
 	liveUrl?: string;
 	dates?: ProjectDates;
+	featured?: boolean;
 }

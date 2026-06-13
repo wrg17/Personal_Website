@@ -12,9 +12,12 @@ export const projects: Project[] = [
 		imageAvifSrcset: oceanAvifSrcset,
 		imageAlt: 'Placeholder project thumbnail',
 		description: 'Placeholder description — replace with a real project summary.',
-		link: '/projects/project-one'
+		link: '/projects/project-one',
+		featured: true
 	}
 ];
+
+export const featuredProjects = projects.filter((p) => p.featured);
 
 export const hobbies: Project[] = [
 	{
