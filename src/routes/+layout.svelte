@@ -29,7 +29,10 @@
 	});
 
 	$effect(() => {
-		document.documentElement.classList.toggle('dark', $theme === 'dark');
+		const isDark = $theme === 'dark';
+		document.documentElement.classList.toggle('dark', isDark);
+		const meta = document.querySelector('meta[name="theme-color"]');
+		if (meta) meta.setAttribute('content', isDark ? '#0a0a0a' : '#fafafa');
 	});
 
 	afterNavigate(() => {
