@@ -23,6 +23,6 @@ describe('InformationWindow', () => {
 		expect(img).toHaveAttribute('src', '/img/sample.jpg');
 
 		const link = screen.getByRole('link');
-		expect(link).toHaveAttribute('href', '/projects/project/p1');
+		expect(link).toHaveAttribute('href', '/projects/sample-project');
 	});
 });
