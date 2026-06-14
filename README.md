@@ -1,4 +1,4 @@
-# Personal Website — William George
+# [williamgeorge.dev](https://williamgeorge.dev)
 
 Personal site built with SvelteKit 2 + Svelte 5, deployed to Netlify.
 
