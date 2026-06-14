@@ -5,6 +5,7 @@ node_modules
 /.svelte-kit
 /package
 .env
+.idea/
 .env.*
 !.env.example
 .netlify
