@@ -1,6 +1,6 @@
 # [williamgeorge.dev](https://williamgeorge.dev)
 
-Personal site built with SvelteKit 2 + Svelte 5, deployed to Netlify.
+Personal site built with SvelteKit 2 + Svelte 5, TypeScript, and Tailwind v4. Deployed to Netlify.
 
 ## Requirements
 
@@ -53,46 +53,16 @@ vitest.config.ts
 Run a single component test: `npx vitest src/lib/components/Header.test.ts`.
 Run a single Playwright spec headed: `npx playwright test e2e/theme.spec.ts --headed`.
 
-## Project layout
-
-```
-src/
-  app.html         # HTML shell
-  app.css          # Global styles
-  app.d.ts         # Ambient types
-  lib/
-    assets/        # SVG icons bundled via Vite
-    components/    # Reusable UI
-    data/          # Static content (projects, profile)
-    stores.ts      # Theme store
-    types.d.ts
-  routes/
-    +layout.svelte
-    +page.svelte
-    about/+page.svelte
-    contact/+page.svelte
-    projects/+page.svelte
-    projects/[slug]/+page.svelte
-    resume/+page.svelte
-    sitemap.xml/+server.ts
-    robots.txt/+server.ts
-    +error.svelte
-static/
-  img/             # Photos, favicons (served from /)
-  theme/           # Theme CSS swapped at runtime
-```
-
 ## CI / Deploy
 
 GitHub Actions (`.github/workflows/ci.yml`) runs on every pull request and on pushes to `main`. The `verify` job runs `lint`, `check`, Vitest, `build`, Playwright (with axe), and Linkinator. On `main`, a dependent `deploy` job triggers the Netlify production build only after `verify` passes.
 
 Netlify still builds deploy previews for every PR automatically — those are not gated on CI.
 
-### One-time setup to enable CI-gated production deploys
+### How CI-gated production deploys are wired
 
-1. **Netlify UI → Site configuration → Build & deploy → Continuous deployment**: disable auto-publishing for the production branch (`main`) so pushes don't trigger a Netlify build directly. Keep deploy previews and branch deploys enabled.
-2. **Netlify UI → Build & deploy → Build hooks**: create a hook named `prod-deploy-from-ci` targeting branch `main`. Copy the URL.
-3. **GitHub repo → Settings → Secrets and variables → Actions**: add a repository secret `NETLIFY_PROD_BUILD_HOOK` set to that URL.
-4. **GitHub repo → Settings → Branches**: add a protection rule for `main` requiring the `verify` check to pass and disallowing direct pushes (PRs only).
+- **Netlify**: auto-publishing on `main` is disabled, so direct pushes don't trigger a Netlify build. Deploy previews and branch deploys remain enabled.
+- **Netlify build hook**: a hook targeting `main` exists; its URL is stored in GitHub as the `NETLIFY_PROD_BUILD_HOOK` repo secret.
+- **GitHub Actions**: the `deploy` job fires that hook only when `verify` passes on a `main` push.
 
-After this, merges to `main` only ship to production if CI is green. Build artifacts (`build/`, `.netlify/`, `.svelte-kit/`, `playwright-report/`, `test-results/`) are git-ignored.
+To fully gate production on green CI, add a branch protection rule on `main` requiring the `verify` check and disallowing direct pushes. Build artifacts (`build/`, `.netlify/`, `.svelte-kit/`, `playwright-report/`, `test-results/`) are git-ignored.
