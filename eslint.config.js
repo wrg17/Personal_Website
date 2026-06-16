@@ -27,6 +27,16 @@ export default [
 		}
 	},
 	{
-		ignores: ['build/', '.svelte-kit/', 'dist/', '.netlify/', 'node_modules/']
+		ignores: [
+			'build/',
+			'.svelte-kit/',
+			'dist/',
+			'.netlify/',
+			'node_modules/',
+			'.claude/',
+			'playwright-report/',
+			'test-results/',
+			'coverage/'
+		]
 	}
 ];
