@@ -5,8 +5,7 @@ export interface CTA {
 
 // Edit these two constants to control the home page hero.
 
-export const positioningLine =
-	'CS + IOE senior at Michigan. I build [your thing]. Replace this sentence with your one-line pitch.';
+export const positioningLine = 'Backend engineer at North. University of Michigan grad.';
 
 export const homeCTAs: CTA[] = [
 	{ label: 'About me', href: '/about' },
